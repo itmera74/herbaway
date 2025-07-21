@@ -5,7 +5,7 @@
     // Получаем параметры из URL
     const params = new URLSearchParams(window.location.search);
     const ref = +params.get('ref');
-    const userName = sanitizeName(params.get('name').replace('_', ' '));
+    const userName = sanitizeName(params.get('name')?.replace('_', ' '));
 
     // Заполняем Мета-теги
     let documentTitle = document.title;
