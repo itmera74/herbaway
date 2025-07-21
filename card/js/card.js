@@ -7,6 +7,8 @@
     const ref = +params.get('ref');
     const userName = sanitizeName(params.get('name')?.replace('_', ' '));
 
+    if(!ref || !userName) document.body = '';
+
     // Заполняем Мета-теги
     let documentTitle = document.title;
     if (userName) documentTitle += `: ${userName}`;
