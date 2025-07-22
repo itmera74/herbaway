@@ -4,7 +4,7 @@
   "description": "Приложение для генерации QR-визиток",
   "start_url": "/qr-card/",
   "display": "standalone",
-  "background_color": "ffffff",
+  "background_color": "#9873cc",
   "theme_color": "#9873cc",
   "orientation": "portrait",
   "icons": [
