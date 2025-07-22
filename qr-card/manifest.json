@@ -1,0 +1,24 @@
+{
+  "name": "QR-визитка",
+  "short_name": "QR-card",
+  "description": "Приложение для генерации QR-визиток",
+  "start_url": "/qr-card/",
+  "display": "standalone",
+  "background_color": "ffffff",
+  "theme_color": "#21ac50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/qr-card/pwa/icons/qr-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/qr-card/pwa/icons/qr-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
