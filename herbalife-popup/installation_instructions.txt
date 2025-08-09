@@ -1,0 +1,44 @@
+Installation instructions
+
+
+The popup has been created to require as little configuration as possible to be included
+on your website, but still give you the flexibility to control how it is installed if you
+need it.
+
+Follow the steps below to get the pop-up working on your site:
+
+1.	Unzip the attached herbalife-popup.zip file. This will give you a folder called
+	'herbalife-popup'
+
+2.	Copy this folder and its contents to your webserver. If possible, you should copy
+	it to the top level of your hosting (where your index files are). If you are unsure 
+	of this, your web hosting partner or digital team will be able to help you.
+
+3. 	If you leave the folder called 'herbalife-popup', and do not rename any of the files
+	in that folder, then you do not need to open these files. If you do need to edit
+	the name, or cannot put it in the top level of your hosting, then you will need to
+	make some file changes - see section below 'how to change the name or path of the
+	popup'.
+	
+4.	Include the following code in the footer of your website, directly above the </body>
+	tag:
+	
+		<div id="herbalifepopup"></div>
+		<script type='text/javascript' src='/herbalife-popup/js-include.js'></script>
+
+5.	That should then be installation complete.
+
+
+How to change the name or path of the popup
+
+If for any reason you cannot leave the folder name as herbalife-popup, or you have to 
+put it in a location other than the top level of your hosting, then you will need to
+amend the following sections of the pop-up files and include code:
+
+6.	In the code you include on your website:
+
+		<div id="herbalifepopup"></div>
+		<script type='text/javascript' src='/herbalife-popup/js-include.js'></script>
+		
+	You need to update the '/herbalife-popup/' URL to the one matching your chosen
+	location.
