@@ -145,6 +145,7 @@
         width: 50vw;
         max-width: none;
         min-width: 90%;
+        max-height: 90%;
     }
 
     .herbalife-content {
