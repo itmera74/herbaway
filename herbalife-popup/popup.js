@@ -1,7 +1,9 @@
 (function () {
-    
+
+    // <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
+
     const varHTML = `
-        <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
+        <link rel="stylesheet" href="/herbalife-popup/popup.css">
         <div class="herbalife-popup" id="wc_herba_popup">
             <div class="herbalife-bg btn-close"></div>
             <div class="herbalife-wrap">
@@ -48,17 +50,30 @@
             </div>
         </div>`;
 
-    
+
     document.addEventListener('DOMContentLoaded', () => {
-        
-        const cookieHlf = getCookie('wc_popup_herba');
-        const cookieQrCode = getCookie('qr_code');
-        if (cookieHlf === 'shown' || cookieQrCode === '1') return;
-        
+
+        // Получаем параметры из URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Получаем utm_medium из Куки или из URL
+        const utm_medium = getCookie('hw_utm_medium') || urlParams.get('utm_medium');
+
+        // Ставим куку hw_utm_medium
+        if (utm_medium === 'qrcode') {
+            setCookie('hw_utm_medium', 'qrcode', 30);
+        }
+
+        // Получаем куку wc_popup_herba
+        const wc_popup_herba = getCookie('wc_popup_herba');
+
+        if (wc_popup_herba === 'shown' || utm_medium === 'qrcode') return;
+
         // Добавляем код окна на страницу
         const popupEl = document.getElementById('herbalifepopup');
+        if (!popupEl) return;
         popupEl.innerHTML = varHTML;
-        
+
         // Получаем все кнопки
         const btnCloseEls = popupEl.querySelectorAll('.btn-close');
         // Вешаем обработчики на все кнопки
@@ -66,14 +81,14 @@
             event.preventDefault();
             hidePopUp(popupEl);
         }));
-        
+
         // Вешаем обработчки на кнопку Esc и Space
         document.addEventListener('keydown', (event) => {
             if (event.code === 'Escape' || event.code === 'Space') {
                 hidePopUp(popupEl);
             }
         });
-        
+
         // Отображаем окно
         popupEl.classList.remove('d-none');
 
