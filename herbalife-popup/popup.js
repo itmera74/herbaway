@@ -48,20 +48,16 @@
             </div>
         </div>`;
 
-    console.log('Hello 1');
     
     document.addEventListener('DOMContentLoaded', () => {
         
-        console.log('Hello 2');
         const cookieHlf = getCookie('wc_popup_herba');
         const cookieQrCode = getCookie('qr_code');
         if (cookieHlf === 'shown' || cookieQrCode === '1') return;
         
-        console.log('Hello 3');
         // Добавляем код окна на страницу
         const popupEl = document.getElementById('herbalifepopup');
         popupEl.innerHTML = varHTML;
-        console.log('Hello 4');
         
         // Получаем все кнопки
         const btnCloseEls = popupEl.querySelectorAll('.btn-close');
@@ -71,7 +67,6 @@
             hidePopUp(popupEl);
         }));
         
-        console.log('Hello 5');
         // Вешаем обработчки на кнопку Esc и Space
         document.addEventListener('keydown', (event) => {
             if (event.code === 'Escape' || event.code === 'Space') {
@@ -79,11 +74,8 @@
             }
         });
         
-        console.log('Hello 6');
         // Отображаем окно
         popupEl.classList.remove('d-none');
-        
-        console.log('Hello 7');
 
     });
 
