@@ -1,9 +1,7 @@
 (function () {
 
-    // <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
-
     const varHTML = `
-        <link rel="stylesheet" href="/herbalife-popup/popup.css">
+        <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
         <div class="herbalife-popup" id="wc_herba_popup">
             <div class="herbalife-bg btn-close"></div>
             <div class="herbalife-wrap">
