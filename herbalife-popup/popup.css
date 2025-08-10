@@ -2,7 +2,7 @@
     --main-color: #7ac142;
     --header-color: #3e3e40;
     --text-color: #6c6d70;
-    --bg-colog: #fff;
+    --bg-color: #fff;
 }
 
 .d-none {
@@ -43,7 +43,7 @@
     position: relative;
     display: inline-block;
     padding: 30px 30px;
-    background: var(--bg-colog);
+    background: var(--bg-color);
     border-radius: 40px;
     vertical-align: top;
 }
