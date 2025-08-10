@@ -1,5 +1,6 @@
 .herbalife-popup {
     --main-color: #7ac142;
+    --header-color: #3e3e40;
     --text-color: #6c6d70;
     --bg-colog: #fff;
 }
@@ -11,7 +12,6 @@
 
 .herbalife-popup {
     margin: 0;
-    font-family: 'Helvetica', 'Arial', sans-serif;
     position: fixed;
     inset: 0;
     z-index: 999999;
@@ -42,10 +42,34 @@
 .herbalife-content {
     position: relative;
     display: inline-block;
-    padding: 15px;
+    padding: 30px 30px;
     background: var(--bg-colog);
     border-radius: 40px;
     vertical-align: top;
+}
+
+.herbalife-content .herbalife-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--main-color);
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    line-height: 36px;
+    display: block;
+    z-index: 999999;
+}
+
+.herbalife-content .herbalife-close:hover {
+    background: #6c6d70;
 }
 
 .herbalife-info {
@@ -58,6 +82,7 @@
 }
 
 .herbalife-info p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 10px 0 0;
 }
 
@@ -77,7 +102,7 @@
 }
 
 .herbalife-info .popup-lead {
-    margin: 10px 30px 30px;
+    margin: 0px 30px 30px;
     padding: 0;
     font-weight: bold;
     font-size: 18px;
@@ -87,44 +112,24 @@
 }
 
 .herbalife-info h3 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0 0 15px;
     padding: 0;
     font-size: 18px;
     line-height: 1.3em;
     font-weight: bold;
-}
-
-.herbalife-info .herbalife-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--main-color);
-    border-radius: 50%;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-    line-height: 36px;
-    display: inline-block;
-}
-
-.herbalife-info .herbalife-close:hover {
-    background: #6c6d70;
+    color: var(--header-color);
 }
 
 .herbalife-row {
     display: grid;
     grid-template-columns: 3fr 1px 2fr;
-    gap: 0;
+    gap: 40px;
     align-items: start;
 }
 
 .herbalife-row .col {
-    padding: 0 20px;
+    padding: 0;
 }
 
 .herbalife-row .separator {
@@ -141,16 +146,22 @@
     }
 
     .herbalife-content {
+        padding: 20px 20px;
         overflow-y: auto;
+    }
+
+    .herbalife-info p.popup-lead {
+        margin: 0px 20px 20px 0px;
+        text-align: left;
     }
 
     .herbalife-row {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 30px;
     }
 
     .herbalife-row .col {
-        padding: 10px;
+        padding: 0px;
     }
 
     .herbalife-row .separator {
@@ -161,11 +172,6 @@
 
     .herbalife-info .left-col.border {
         text-align: center;
-    }
-
-    .herbalife-info p.popup-lead {
-        margin: 10px 30px 20px 10px;
-        text-align: left;
     }
 
     .herbalife-info p.popup-lead,

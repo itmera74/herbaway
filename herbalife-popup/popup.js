@@ -1,13 +1,15 @@
 (function () {
 
+    // <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
+
     const varHTML = `
-        <link rel="stylesheet" href="https://itmera74.github.io/herbaway/herbalife-popup/popup.css">
+        <link rel="stylesheet" href="/herbalife-popup/popup.css">
         <div class="herbalife-popup" id="wc_herba_popup">
             <div class="herbalife-bg btn-close"></div>
             <div class="herbalife-wrap">
                 <div class="herbalife-content">
+                <a class="herbalife-close btn-close" href="#">&times;</a>
                     <div class="herbalife-info">
-                        <a class="herbalife-close btn-close" href="#">&times;</a>
                         <p class="popup-lead">
                             Данный сайт принадлежит Независимому Партнеру Herbalife
                         </p>
@@ -24,7 +26,7 @@
                                 </p>
                                 <p>
                                     Если у Вас еще нет Консультанта по питанию,
-                                    <a class="btn-close" href="#">нажмите здесь</a>, чтобы продолжить.
+                                    <a class="btn-close" href="#">нажмите&nbsp;здесь</a>, чтобы продолжить.
                                 </p>
                             </div>
                             
